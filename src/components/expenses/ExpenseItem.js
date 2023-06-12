@@ -1,15 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
-import Card from "../ui/Card";
+import Card from "../UI/Card";
 
 const ExpenseItem = (props) => {
 
-  let title = props.exp.title
+  // useState will always return [currentState, function for updating currentState]
+  // useState(variable) where variable will be the initial state
+  const [title, setTitle] = useState(props.exp.title)
+
   const clickHandler = () => {
+    setTitle('Updated')
     console.log("clicked")
-    title = "updated!"
   }
+
   return (
     // JSX
     <React.Fragment>

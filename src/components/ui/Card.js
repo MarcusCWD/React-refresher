@@ -3,7 +3,7 @@ import './Card.css'
 function Card(props){
     // component used will have two default items
     // 1. props.className, 2. props.children
-        // console.log(props);
+        console.log(props);
         // console.log(classes);
 
     // classes here defined: 'card' belongs to ./Card.css
